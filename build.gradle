@@ -1,0 +1,30 @@
+apply plugin: 'application'
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'com.google.protobuf'
+
+group 'io.exp.apachebeam'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.9'
+    }
+}
+
+
+apply plugin: "com.google.protobuf"
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+}
