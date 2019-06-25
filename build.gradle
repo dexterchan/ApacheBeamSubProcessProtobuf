@@ -8,23 +8,55 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
+mainClassName = 'io.exp.apachebeam.MainClass'
+
 repositories {
     mavenCentral()
 }
 
 buildscript {
     repositories {
-        maven { url "https://plugins.gradle.org/m2/" }
+        mavenCentral()
     }
     dependencies {
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.9'
     }
 }
 
-
-apply plugin: "com.google.protobuf"
+sourceSets {
+    main {
+        proto {
+            // In addition to the default 'src/main/proto'
+            srcDir 'src/main/protobuf'
+            srcDir 'src/main/protocolbuffers'
+            // In addition to the default '**/*.proto' (use with caution).
+            // Using an extension other than 'proto' is NOT recommended,
+            // because when proto files are published along with class files, we can
+            // only tell the type of a file from its extension.
+            include '**/*.protodevel'
+        }
+    }
+    test {
+        proto {
+            // In addition to the default 'src/test/proto'
+            srcDir 'src/test/protocolbuffers'
+        }
+    }
+}
 
 dependencies {
+    // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
+    compile group: 'com.google.protobuf', name: 'protobuf-java', version: '3.8.0'
     testCompile group: 'junit', name: 'junit', version: '4.12'
+
+}
+
+protobuf {
+
+    // Configure the protoc executable
+    protoc {
+        // Download from repositories
+        artifact = 'com.google.protobuf:protoc:3.0.0'
+    }
 
 }
