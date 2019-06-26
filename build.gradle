@@ -70,7 +70,69 @@ protobuf {
     // Configure the protoc executable
     protoc {
         // Download from repositories
-        artifact = 'com.google.protobuf:protoc:3.0.0'
+        artifact = "com.google.protobuf:protoc:${protocVersion}"
     }
 
+}
+
+startScripts.enabled = false
+
+task routeGuideServer(type: CreateStartScripts) {
+    mainClassName = 'io.grpc.examples.routeguide.RouteGuideServer'
+    applicationName = 'route-guide-server'
+    outputDir = new File(project.buildDir, 'tmp')
+    classpath = startScripts.classpath
+}
+
+task routeGuideClient(type: CreateStartScripts) {
+    mainClassName = 'io.grpc.examples.routeguide.RouteGuideClient'
+    applicationName = 'route-guide-client'
+    outputDir = new File(project.buildDir, 'tmp')
+    classpath = startScripts.classpath
+}
+
+task helloWorldServer(type: CreateStartScripts) {
+    mainClassName = 'io.grpc.examples.helloworld.HelloWorldServer'
+    applicationName = 'hello-world-server'
+    outputDir = new File(project.buildDir, 'tmp')
+    classpath = startScripts.classpath
+}
+
+task helloWorldClient(type: CreateStartScripts) {
+    mainClassName = 'io.grpc.examples.helloworld.HelloWorldClient'
+    applicationName = 'hello-world-client'
+    outputDir = new File(project.buildDir, 'tmp')
+    classpath = startScripts.classpath
+}
+
+task hedgingHelloWorldServer(type: CreateStartScripts) {
+    mainClassName = 'io.grpc.examples.hedging.HedgingHelloWorldServer'
+    applicationName = 'hedging-hello-world-server'
+    outputDir = new File(project.buildDir, 'tmp')
+    classpath = startScripts.classpath
+}
+
+task hedgingHelloWorldClient(type: CreateStartScripts) {
+    mainClassName = 'io.grpc.examples.hedging.HedgingHelloWorldClient'
+    applicationName = 'hedging-hello-world-client'
+    outputDir = new File(project.buildDir, 'tmp')
+    classpath = startScripts.classpath
+}
+
+task compressingHelloWorldClient(type: CreateStartScripts) {
+    mainClassName = 'io.grpc.examples.experimental.CompressingHelloWorldClient'
+    applicationName = 'compressing-hello-world-client'
+    outputDir = new File(project.buildDir, 'tmp')
+    classpath = startScripts.classpath
+}
+
+applicationDistribution.into('bin') {
+    from(routeGuideServer)
+    from(routeGuideClient)
+    from(helloWorldServer)
+    from(helloWorldClient)
+    from(hedgingHelloWorldClient)
+    from(hedgingHelloWorldServer)
+    from(compressingHelloWorldClient)
+    fileMode = 0755
 }
