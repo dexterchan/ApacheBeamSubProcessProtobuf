@@ -10,6 +10,10 @@ sourceCompatibility = 1.8
 
 mainClassName = 'io.exp.apachebeam.MainClass'
 
+def grpcVersion = '1.21.0' // CURRENT_GRPC_VERSION
+def protobufVersion = '3.8.0'
+def protocVersion = protobufVersion
+
 repositories {
     mavenCentral()
 }
@@ -35,6 +39,11 @@ sourceSets {
             // only tell the type of a file from its extension.
             include '**/*.protodevel'
         }
+
+        java {
+            srcDirs 'build/generated/source/proto/main/grpc'
+            srcDirs 'build/generated/source/proto/main/java'
+        }
     }
     test {
         proto {
@@ -45,8 +54,13 @@ sourceSets {
 }
 
 dependencies {
-    // https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java
-    compile group: 'com.google.protobuf', name: 'protobuf-java', version: '3.8.0'
+    implementation "io.grpc:grpc-protobuf:${grpcVersion}"
+    implementation "io.grpc:grpc-stub:${grpcVersion}"
+    compileOnly "javax.annotation:javax.annotation-api:1.2"
+
+    implementation "com.google.protobuf:protobuf-java-util:${protobufVersion}"
+    runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
 
 }
