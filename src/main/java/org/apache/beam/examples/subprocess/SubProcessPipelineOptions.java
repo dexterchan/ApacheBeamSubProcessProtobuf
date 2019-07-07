@@ -55,6 +55,11 @@ public interface SubProcessPipelineOptions extends PipelineOptions {
   @Default.Boolean(true)
   Boolean getOnlyUpLoadLogsOnError();
 
+  @Description("Path of the file to write into")
+  @Default.String("/tmp/subProcessOutput")
+  String getOutput();
+  void setOutput(String value);
+
   void setOnlyUpLoadLogsOnError(Boolean onlyUpLoadLogsOnError);
 
   @Default.InstanceFactory(SubProcessConfigurationFactory.class)

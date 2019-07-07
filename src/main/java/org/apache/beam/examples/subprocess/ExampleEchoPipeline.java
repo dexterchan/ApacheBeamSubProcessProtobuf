@@ -25,11 +25,13 @@ import org.apache.beam.examples.subprocess.kernel.SubProcessCommandLineArgs.Comm
 import org.apache.beam.examples.subprocess.kernel.SubProcessKernel;
 import org.apache.beam.examples.subprocess.utils.CallingSubProcessUtils;
 import org.apache.beam.sdk.Pipeline;
+import org.apache.beam.sdk.io.TextIO;
 import org.apache.beam.sdk.options.PipelineOptionsFactory;
 import org.apache.beam.sdk.transforms.Create;
 import org.apache.beam.sdk.transforms.DoFn;
 import org.apache.beam.sdk.transforms.ParDo;
 import org.apache.beam.sdk.values.KV;
+import org.apache.beam.sdk.values.PCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -65,10 +67,19 @@ public class ExampleEchoPipeline {
     }
 
     // Define the pipeline which is two transforms echoing the inputs out to Logs
-    p.apply(Create.of(sampleData))
+    PCollection<KV<String, String>>  pout=p.apply(Create.of(sampleData))
         .apply("Echo inputs round 1", ParDo.of(new EchoInputDoFn(configuration, "Echo")))
         .apply("Echo inputs round 2", ParDo.of(new EchoInputDoFn(configuration, "EchoAgain")));
 
+    pout.apply("Output Result on console",ParDo.of(
+            new DoFn<KV<String, String>, String>() {
+              @ProcessElement
+              public void processElement(@Element KV<String, String> e,OutputReceiver<String> out){
+                String strout = e.getKey() +":"+e.getValue();
+                out.output(strout);
+              }
+            }
+    )).apply(TextIO.write().to(options.getOutput()).withSuffix(".out"));;
     p.run();
   }
 
