@@ -1,0 +1,27 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  //"command": "cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Debug ..",
+
+  "version": "2.0.0",
+  "isShellCommand": true,
+
+  "options": {
+    "cwd": "${workspaceRoot}/build"
+  },
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Cmake",
+      "command": "cmake",
+      "args": ["-G", "'Unix Makefiles'", "-DCMAKE_BUILD_TYPE=Debug", ".."],
+      "presentation": { "echo": true, "reveal": "always", "panel": "shared" }
+    },
+    {
+      "label": "make",
+      "command": "make -j 8",
+      "presentation": { "echo": true, "reveal": "always", "panel": "shared" },
+      "isBuildCommand": true
+    }
+  ]
+}
