@@ -46,8 +46,9 @@ public class CallingSubProcessUtils {
   public static String setUp(SubProcessConfiguration configuration,  String binaryName)
       throws Exception {
 
-    if (!semaphores.containsKey(binaryName)) {
-      initSemaphore(configuration.getConcurrency(), binaryName);
+    String execBinaryName = ExecutableFile.refinedExecutableName(binaryName);
+    if (!semaphores.containsKey(execBinaryName)) {
+      initSemaphore(configuration.getConcurrency(), execBinaryName);
     }
 
     synchronized (downloadedFiles) {
@@ -60,7 +61,7 @@ public class CallingSubProcessUtils {
         downloadedFiles.add(binaryName);
       }
     }
-    return ExecutableFile.refinedExecutableName(binaryName);
+    return execBinaryName;
   }
 
   public static synchronized void initSemaphore(Integer permits, String binaryName) {

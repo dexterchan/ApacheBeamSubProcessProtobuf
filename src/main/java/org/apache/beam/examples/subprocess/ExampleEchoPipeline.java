@@ -68,7 +68,7 @@ public class ExampleEchoPipeline {
 
     // Define the pipeline which is two transforms echoing the inputs out to Logs
     PCollection<KV<String, String>>  pout=p.apply(Create.of(sampleData))
-        .apply("Echo inputs round 1", ParDo.of(new EchoInputDoFn(configuration, "Echo")))
+        .apply("Echo inputs round 1", ParDo.of(new EchoInputDoFn(configuration, "cprog.tar.gz")))
         .apply("Echo inputs round 2", ParDo.of(new EchoInputDoFn(configuration, "EchoAgain")));
 
     pout.apply("Output Result on console",ParDo.of(

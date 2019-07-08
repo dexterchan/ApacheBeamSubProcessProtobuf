@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f15d5904-cf99-4a34-8e31-89e8651b2e50" name="Default Changelist" comment="" />
+    <list default="true" id="f15d5904-cf99-4a34-8e31-89e8651b2e50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/ExampleEchoPipeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/ExampleEchoPipeline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtilsTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -18,24 +23,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/ExampleEchoPipeline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="101" column="10" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
+            <state relative-caret-position="136">
+              <caret line="70" column="94" selection-start-line="70" selection-start-column="94" selection-end-line="70" selection-end-column="94" />
               <folding>
-                <element signature="e#5719#5720#0" expanded="true" />
-                <element signature="e#5794#5795#0" expanded="true" />
+                <element signature="e#3619#3917#0" expanded="true" />
+                <element signature="e#3916#3917#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="448">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1695#1703#0" expanded="true" />
@@ -45,10 +50,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/FileUtils.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/ExampleEchoPipelineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="139" column="54" lean-forward="true" selection-start-line="139" selection-start-column="54" selection-end-line="139" selection-end-column="54" />
+            <state relative-caret-position="1168">
+              <caret line="156" column="62" selection-start-line="156" selection-start-column="46" selection-end-line="156" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,32 +62,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/FileUtilsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="e#232#233#0" expanded="true" />
-                <element signature="e#261#262#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/ExecutableFileTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
+            <state relative-caret-position="369">
               <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/ExecutableFile.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtilsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-66">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="218">
+              <caret line="57" column="39" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/FileUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="129" column="38" lean-forward="true" selection-start-line="129" selection-start-column="38" selection-end-line="129" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,35 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/kernel/SubProcessKernel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="77" column="7" lean-forward="true" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtilsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/kernel/SubProcessCommandLineArgs.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/ExampleEchoPipelineTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+            <state relative-caret-position="300">
+              <caret line="64" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
@@ -165,16 +148,16 @@
         <option value="$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/SubProcessPipelineOptions.java" />
         <option value="$PROJECT_DIR$/src/main/CPlusPlus/deployBinary.sh" />
         <option value="$PROJECT_DIR$/Readme.md" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtils.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/ExampleEchoPipelineTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/ExampleEchoPipeline.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/ExecutableFile.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/ExecutableFileTest.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/FileUtilsTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/FileUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtilsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/ExampleEchoPipeline.java" />
       </list>
     </option>
   </component>
@@ -272,6 +255,13 @@
               <item name="ApacheBeamSubProcessProtobuf" type="b2602c69:ProjectViewProjectNode" />
               <item name="ApacheBeamSubProcessProtobuf" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ApacheBeamSubProcessProtobuf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ApacheBeamSubProcessProtobuf" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -307,7 +297,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562586374428" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562597763992" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/build.gradle" />
@@ -337,7 +327,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FileUtilsTest">
+  <component name="RunManager" selected="Application.SubProcessPipeline local">
     <configuration name="AddPerson example" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="io.exp.apachebeam.example.AddPerson" />
       <module name="io.exp.apachebeam.CplusCplusProtobuf.main" />
@@ -442,8 +432,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FileUtilsTest" />
         <item itemvalue="JUnit.CallingSubProcessUtilsTest" />
+        <item itemvalue="JUnit.FileUtilsTest" />
         <item itemvalue="JUnit.ExecutableFileTest" />
         <item itemvalue="JUnit.ExampleEchoPipelineTest" />
       </list>
@@ -463,35 +453,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FileUtilsTest - 2019.07.08 at 13h 01m 27s.xml">
-      <configuration name="FileUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FileUtilsTest - 2019.07.08 at 13h 04m 15s.xml">
-      <configuration name="FileUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FileUtilsTest - 2019.07.08 at 14h 20m 07s.xml">
-      <configuration name="FileUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FileUtilsTest - 2019.07.08 at 14h 21m 58s.xml">
-      <configuration name="FileUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 14h 24m 38s.xml">
+    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 22h 34m 04s.xml">
       <configuration name="CallingSubProcessUtilsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileUtilsTest - 2019.07.08 at 14h 26m 07s.xml">
-      <configuration name="FileUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 19h 39m 43s.xml">
+    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 22h 37m 48s.xml">
       <configuration name="CallingSubProcessUtilsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileUtilsTest - 2019.07.08 at 19h 40m 37s.xml">
-      <configuration name="FileUtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 19h 44m 25s.xml">
+    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 22h 39m 15s.xml">
       <configuration name="CallingSubProcessUtilsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileUtilsTest - 2019.07.08 at 19h 44m 38s.xml">
-      <configuration name="FileUtilsTest" configurationId="JUnit" />
+    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 22h 40m 13s.xml">
+      <configuration name="CallingSubProcessUtilsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 22h 40m 58s.xml">
+      <configuration name="CallingSubProcessUtilsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 22h 41m 50s.xml">
+      <configuration name="CallingSubProcessUtilsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 22h 44m 52s.xml">
+      <configuration name="CallingSubProcessUtilsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 22h 48m 36s.xml">
+      <configuration name="CallingSubProcessUtilsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 22h 49m 16s.xml">
+      <configuration name="CallingSubProcessUtilsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CallingSubProcessUtilsTest - 2019.07.08 at 22h 53m 48s.xml">
+      <configuration name="CallingSubProcessUtilsTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -533,12 +523,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/FileUtils.java</url>
-          <line>113</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/FileUtils.java</url>
           <line>133</line>
           <properties />
           <option name="timeStamp" value="9" />
@@ -548,6 +532,30 @@
           <line>26</line>
           <properties />
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtilsTest.java</url>
+          <line>122</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtilsTest.java</url>
+          <line>107</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/kernel/SubProcessKernel.java</url>
+          <line>64</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtilsTest.java</url>
+          <line>120</line>
+          <properties />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -702,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -729,24 +730,6 @@
             <element signature="e#2048#2049#0" expanded="true" />
             <element signature="e#2075#2076#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/ExampleEchoPipeline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="101" column="10" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
-          <folding>
-            <element signature="e#5719#5720#0" expanded="true" />
-            <element signature="e#5794#5795#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/ExampleEchoPipelineTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -778,20 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/kernel/SubProcessKernel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="77" column="7" lean-forward="true" selection-start-line="77" selection-start-column="7" selection-end-line="77" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtilsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/ExecutableFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-66">
@@ -799,13 +768,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/ExecutableFileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -822,21 +784,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="139" column="54" lean-forward="true" selection-start-line="139" selection-start-column="54" selection-end-line="139" selection-end-column="54" />
+        <state relative-caret-position="73">
+          <caret line="129" column="38" lean-forward="true" selection-start-line="129" selection-start-column="38" selection-end-line="129" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/ExecutableFileTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/kernel/SubProcessKernel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="448">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1695#1703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/ExampleEchoPipelineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1168">
+          <caret line="156" column="62" selection-start-line="156" selection-start-column="46" selection-end-line="156" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/apache/beam/examples/subprocess/utils/CallingSubProcessUtilsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="57" column="39" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/beam/examples/subprocess/ExampleEchoPipeline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="70" column="94" selection-start-line="70" selection-start-column="94" selection-end-line="70" selection-end-column="94" />
+          <folding>
+            <element signature="e#3619#3917#0" expanded="true" />
+            <element signature="e#3916#3917#0" expanded="true" />
           </folding>
         </state>
       </provider>
