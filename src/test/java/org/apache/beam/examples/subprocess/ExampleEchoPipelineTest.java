@@ -142,7 +142,7 @@ public class ExampleEchoPipelineTest {
 
         @Setup
         public void setUp() throws Exception {
-            CallingSubProcessUtils.setUp(configuration, binaryName);
+            this.binaryName=CallingSubProcessUtils.setUp(configuration, binaryName);
         }
 
         @ProcessElement

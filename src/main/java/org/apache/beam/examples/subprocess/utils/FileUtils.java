@@ -19,8 +19,7 @@ package org.apache.beam.examples.subprocess.utils;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.ReadableByteChannel;
 import java.nio.channels.WritableByteChannel;
@@ -32,8 +31,13 @@ import org.apache.beam.examples.subprocess.configuration.SubProcessConfiguration
 import org.apache.beam.sdk.io.FileSystems;
 import org.apache.beam.sdk.io.fs.ResolveOptions.StandardResolveOptions;
 import org.apache.beam.sdk.io.fs.ResourceId;
+import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
+import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
+import org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import org.apache.commons.compress.utils.IOUtils;
 
 /** Utilities for dealing with movement of files from object stores and workers. */
 public class FileUtils {
@@ -124,6 +128,23 @@ public class FileUtils {
     }
 
     return destinationFile.toString();
+  }
+
+  public static void uncompresslocalfile(String compressedFile,String out) throws IOException{
+    try (TarArchiveInputStream fin = new TarArchiveInputStream(new GzipCompressorInputStream(new FileInputStream(compressedFile))) ){
+      TarArchiveEntry entry;
+      while ((entry = fin.getNextTarEntry()) != null) {
+        if (entry.isDirectory()) {
+          continue;
+        }
+        File curfile = new File(out, entry.getName());
+        File parent = curfile.getParentFile();
+        if (!parent.exists()) {
+          parent.mkdirs();
+        }
+        IOUtils.copy(fin, new FileOutputStream(curfile));
+      }
+    }
   }
 
   /**

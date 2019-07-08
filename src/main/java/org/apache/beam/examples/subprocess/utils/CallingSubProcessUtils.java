@@ -43,7 +43,7 @@ public class CallingSubProcessUtils {
   // Limit the number of threads able to do work
   private static Map<String, Semaphore> semaphores = new ConcurrentHashMap<>();
 
-  public static void setUp(SubProcessConfiguration configuration, String binaryName)
+  public static String setUp(SubProcessConfiguration configuration,  String binaryName)
       throws Exception {
 
     if (!semaphores.containsKey(binaryName)) {
@@ -60,6 +60,7 @@ public class CallingSubProcessUtils {
         downloadedFiles.add(binaryName);
       }
     }
+    return ExecutableFile.refinedExecutableName(binaryName);
   }
 
   public static synchronized void initSemaphore(Integer permits, String binaryName) {

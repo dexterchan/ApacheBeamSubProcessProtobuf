@@ -18,6 +18,7 @@ ext {
     grpcVersion = '1.21.0' // CURRENT_GRPC_VERSION
     protobufVersion = '3.8.0'
     protocVersion = protobufVersion
+    commonscompressVersion = '1.18'
 }
 mainClassName = 'io.exp.apachebeam.MainClass'
 
@@ -91,6 +92,8 @@ dependencies {
 
     compile "com.google.guava:guava:20.0"
     compile group: 'com.google.code.gson', name: 'gson', version: '2.7'
+
+    compile  "org.apache.commons:commons-compress:$commonscompressVersion"
 
     testCompile "org.hamcrest:hamcrest-junit:2.0.0.0"
     testCompile "junit:junit:4.12"

@@ -50,6 +50,9 @@ public class ExecutableFile {
     this.destinationLocation = destinationLocation;
   }
 
+
+  private static String [] compressedExExtenson={"tgz","tar.gz"};
+
   public ExecutableFile(SubProcessConfiguration configuration, String fileName)
       throws IllegalStateException {
     if (configuration == null) {
@@ -71,5 +74,27 @@ public class ExecutableFile {
   private void setSourceLocation(SubProcessConfiguration configuration) {
     this.destinationLocation =
         FileUtils.getFileResourceId(configuration.getWorkerPath(), fileName).toString();
+  }
+  public static String isCompressedExecutable(String fileName){
+    for (String extension: compressedExExtenson) {
+      if (fileName.endsWith(extension)) {
+        return extension;
+      }
+    }
+    return null;
+  }
+
+  public static String refinedExecutableName(String fileName){
+    String refinedName = fileName;
+
+    String extension=null;
+    if((extension=isCompressedExecutable(fileName))!=null){
+      refinedName=fileName.substring(0,fileName.length() - extension.length());
+      if(refinedName.endsWith(".")){
+        refinedName=refinedName.substring(0,refinedName.length()-1);
+      }
+    }
+
+    return refinedName;
   }
 }

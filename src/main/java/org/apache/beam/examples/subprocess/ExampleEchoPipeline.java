@@ -61,7 +61,7 @@ public class ExampleEchoPipeline {
 
     // Create some sample data to be fed to our c++ Echo library
     List<KV<String, String>> sampleData = new ArrayList<>();
-    for (int i = 0; i < 10000; i++) {
+    for (int i = 0; i < 10; i++) {
       String str = String.valueOf(i);
       sampleData.add(KV.of(str, str));
     }
@@ -101,7 +101,7 @@ public class ExampleEchoPipeline {
 
     @Setup
     public void setUp() throws Exception {
-      CallingSubProcessUtils.setUp(configuration, binaryName);
+      this.binaryName=CallingSubProcessUtils.setUp(configuration, binaryName);
     }
 
     @ProcessElement
