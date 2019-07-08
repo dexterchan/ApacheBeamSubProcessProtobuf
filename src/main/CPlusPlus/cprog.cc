@@ -5,9 +5,9 @@ void ctest2(int *);
 
 int main(int argc, char *argv[])
 {
-    if (argc < 2)
+    if (argc < 3)
     {
-        std::cerr << "No parameter sent, must send the return file location " << '\n';
+        std::cerr << "No parameter sent, must send the return file location and a statement to echo" << '\n';
         return 1;
     }
     int x = 10;
@@ -17,11 +17,12 @@ int main(int argc, char *argv[])
     ctest2(&y);
 
     //std::cout << x << "," << y << std::endl;
-
     std::string retFile = argv[1];
+    std::string word = argv[2];
+
     std::ofstream myfile;
     myfile.open(retFile);
-    myfile << x << "," << y << std::endl;
+    myfile << word << ":" << x << "," << y << std::endl;
     myfile.close();
 
     return 0;

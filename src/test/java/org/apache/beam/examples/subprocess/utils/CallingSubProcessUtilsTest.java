@@ -94,7 +94,7 @@ public class CallingSubProcessUtilsTest {
         @ProcessElement
         public void processElement(ProcessContext c) throws Exception {
             assert(this.binaryName.equals("cprog"));
-            /*
+
             try {
                 // Our Library takes a single command in position 0 which it will echo back in the result
                 SubProcessCommandLineArgs commands = new SubProcessCommandLineArgs();
@@ -104,15 +104,16 @@ public class CallingSubProcessUtilsTest {
                 // The ProcessingKernel deals with the execution of the process
                 SubProcessKernel kernel = new SubProcessKernel(configuration, binaryName);
 
+                /*
                 // Run the command and work through the results
                 List<String> results = kernel.exec(commands);
                 for (String s : results) {
                     c.output(KV.of(c.element().getKey(), s));
-                }
+                }*/
             } catch (Exception ex) {
                 LOG.error("Error processing element ", ex);
                 throw ex;
-            }*/
+            }
         }
     }
 

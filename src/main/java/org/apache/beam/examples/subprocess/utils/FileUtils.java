@@ -143,6 +143,7 @@ public class FileUtils {
           parent.mkdirs();
         }
         IOUtils.copy(fin, new FileOutputStream(curfile));
+        curfile.setExecutable(true);
       }
     }
   }
