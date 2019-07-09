@@ -19,7 +19,7 @@ public class FileUtilsTest {
     public void init(){
         compressedFile="/tmp/grid_working_files/cprog.tar.gz";
     }
-    @Test
+    //@Test
     public void uncompresslocalfile() throws IOException {
         File f = new File(compressedFile);
         LOG.debug(f.getAbsoluteFile().getParent());

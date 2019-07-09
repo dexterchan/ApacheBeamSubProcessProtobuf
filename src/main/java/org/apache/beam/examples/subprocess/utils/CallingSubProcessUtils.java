@@ -17,6 +17,7 @@
  */
 package org.apache.beam.examples.subprocess.utils;
 
+import java.io.File;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -59,6 +60,13 @@ public class CallingSubProcessUtils {
         ExecutableFile executableFile = new ExecutableFile(configuration, binaryName);
         FileUtils.copyFileFromGCSToWorker(executableFile);
         downloadedFiles.add(binaryName);
+        if(ExecutableFile.isCompressedExecutable(binaryName)!=null){
+          String compressedFile=executableFile.getDestinationLocation();
+          File f = new File(compressedFile);
+          LOG.info(f.getAbsoluteFile().getParent());
+          String parentPath = f.getAbsoluteFile().getParent();
+          FileUtils.uncompresslocalfile(compressedFile,parentPath);
+        }
       }
     }
     return execBinaryName;
