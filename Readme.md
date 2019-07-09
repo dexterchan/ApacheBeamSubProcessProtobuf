@@ -14,6 +14,7 @@ java -classpath build/libs/ApacheBeamSubProcessProtobuf-1.0-SNAPSHOT.jar org.apa
   --project=peer2peer \
   --sourcePath=gs://pi_calculation/echo/linux --concurrency=2 \
   --output=gs://pi_calculation/echo_df_dataflow \
+  --workerPath=/tmp \
   --tempLocation=gs://pi_calculation/temp/ \
   --region=us-central1 
 

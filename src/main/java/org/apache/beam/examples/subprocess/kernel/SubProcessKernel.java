@@ -54,6 +54,7 @@ public class SubProcessKernel {
   public SubProcessKernel(SubProcessConfiguration options, String binaryName) {
     this.configuration = options;
     this.processBuilder = new ProcessBuilder(binaryName);
+    this.processBuilder.environment().put("LD_LIBRARY_PATH",options.getWorkerPath());
   }
 
   public List<String> exec(SubProcessCommandLineArgs commands) throws Exception {
